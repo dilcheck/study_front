@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>vue.js simpleuse</title>
+    </head>
+
+    <body>
+        <div id="app">
+            {{ message }}
+        </div>
+
+        <div id="app-2">
+            <hr>
+            <span v-bind:title="message">
+                내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다!
+            </span>
+        </div>
+
+        <div id="app-3">
+            <hr>
+            <p v-if="seen">상태 조건에 따라 보여지는 메시지</p>
+            <button v-on:click="changeStatus">보이기 여부 설정</button>
+        </div>
+
+        <div id="app-4">
+            <hr>
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <hr>
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">메시지 뒤집기</button>
+        </div>
+
+        <div id="app-6">
+            <hr>
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <div id="app-7">
+            <hr>
+            <ol>
+                <!--                 
+                    이제 각 todo-item 에 todo 객체를 제공합니다.
+                    화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다. 
+                    또한 각 구성 요소에 "키"를 제공해야합니다 (나중에 설명 됨).
+                    "키"라는 개념은 index라고 보면 될 것 같음
+                    
+                    v-bind 에 있는 이름과 js 에 있는 prop, template 이름이
+                    같아야만 데이터를 끌고 올 수 있음
+                    반대로 하면 같은 template 이라도 prop이름을 다르게 하여
+                    데이터들을 좀더 유동적으로 가져올 수 있을 것 같아 보임.
+                    -->
+                
+                <todo-item
+                    v-for="item in groceryList"
+                    v-bind:test="item" 
+                    v-bind:key="item.id">
+                </todo-item>
+            </ol>
+        </div>
+    </body>
+    
+
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="simpleUse.js"></script>
+</html>

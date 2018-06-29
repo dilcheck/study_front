@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Vue Instance</title>
+    </head>
+
+    <body>
+        <div id="instance-1">
+            now count : {{data.a}}<br>
+            <button v-on:click="increaseCountA">Increase Count A</button>
+            <hr>
+            
+            now count : {{data.b}}<br>
+            <button v-on:click="addInstanceB">Add Instance B</button>
+            <button v-on:click="increaseCountB">Increase Count B</button>
+        </div>
+        <div id="instance-2">
+
+        </div>
+    </body>
+    
+
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="instance.js"></script>
+</html>

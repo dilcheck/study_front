@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Vue Template</title>
+    </head>
+
+    <body>
+        <div id="template-1">
+                <span>Normal : {{ data.msg }}</span><br>
+                <span v-once>Once: {{ data.msg }}</span><br>
+                <button v-on:click="changeMessage">change message</button>
+        </div>
+    </body>
+    
+
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="template.js"></script>
+</html>
