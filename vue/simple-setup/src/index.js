@@ -1,9 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+//view
 import App from './vue/App';
 import main from './vue/main';
 import test from './vue/test'
+
+//static resource
+import assets from './assets/logo.png'
 
 
 Vue.filter('capitalize', function (string) {
