@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import App from './vue/App';
-import test from './vue/test';
+import main from './vue/main';
+import test from './vue/test'
 
 
 Vue.filter('capitalize', function (string) {
@@ -15,7 +16,8 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     routes: [
-      { path: '/', component: test },
+        { path: '/', component: main },
+        { path: '/test', component: test },
     ]
   })
 
